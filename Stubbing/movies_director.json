@@ -1,0 +1,17 @@
+[
+ {
+ "movie_id": 1234567891231,
+ "title": "Interstellar",
+ "director_id": 123812381
+ },
+ {
+ "movie_id": 5555121231123,
+ "title": "The dark knight",
+ "director_id": 123812381
+ },
+ {
+ "movie_id": 129429123123,
+ "title": "Inception",
+ "director_id": 123812381
+ }
+]
