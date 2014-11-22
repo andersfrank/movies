@@ -369,6 +369,7 @@ subscribeNext:^(NSNumber *directorRating) {
 ---
 
 # Complete
+## ----------|
 
 ---
 # Operatorer
@@ -404,7 +405,9 @@ subscribeNext:^(NSNumber *directorRating) {
 1. Applikationen anropar SavingApplications/ som returnerar ett saving application id.
 
 1. Applikationen anropar POST SignOrder/ där sign order objektet som postas innehåller saving applications id:et.
+
 1. Därefter öppnas bank id applikationen och låter användaren signera.
+
 1. Applikationen anropar POST SignOrder/ med applkations id:et varannan sekund tills det returnerade SignOrder objektet har state COMPLETE. I sign order objektet som postas ingår target saving objektet som användaren blivit inbjuden till.
 I det returnerade SignOrder objektet ingår en session samt det nu accepterade target saving objektet.
 
