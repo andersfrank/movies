@@ -8,34 +8,40 @@
 
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <ReactiveCocoa/RACEXTScope.h>
-#import "RACSignal+AFNetworking.h"
-#import "AFHTTPRequestOperationManager.h"
+#import "RACSignal+Request.h"
 
-#import "NSArray+Movies.h"
+#import "NSArray+Helpers.h"
 #import "Movie.h"
 #import "Director.h"
 
-@implementation RACSignal (AFNetworking)
+@implementation RACSignal (Request)
 
 + (RACSignal *)getRequest:(NSString *)path {
     
-    AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://www.example.com/"]];
-    
-    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    NSString *fullPath = [NSString stringWithFormat:@"http://www.example.com/%@",path];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:fullPath]];
     
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        
-        AFHTTPRequestOperation *operation =[manager GET:path parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-            [subscriber sendNext:responseObject];
-            [subscriber sendCompleted];
-        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-            [subscriber sendError:error];
+        [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+            
+            if (!connectionError) {
+                
+                id json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+                [subscriber sendNext:json];
+                [subscriber sendCompleted];
+                
+            } else {
+                [subscriber sendError:connectionError];
+            }
+            
         }];
-        return [RACDisposable disposableWithBlock:^{
-            [operation cancel];
-        }];
-    }];
 
+        return [RACDisposable disposableWithBlock:^{
+        // If we were using AFNetworking, we would cancel the operation here.
+        }];
+        
+    }];
+    
 }
 
 + (RACSignal *)getMovieWithId:(NSNumber *)movieId {

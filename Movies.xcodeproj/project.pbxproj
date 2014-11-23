@@ -16,13 +16,13 @@
 		0535350E1A18E13100155FBF /* MoviesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0535350D1A18E13100155FBF /* MoviesTests.m */; };
 		0535351C1A18E15A00155FBF /* Director.m in Sources */ = {isa = PBXBuildFile; fileRef = 053535191A18E15A00155FBF /* Director.m */; };
 		0535351D1A18E15A00155FBF /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 0535351B1A18E15A00155FBF /* Movie.m */; };
-		053535241A18E54C00155FBF /* NSArray+Movies.m in Sources */ = {isa = PBXBuildFile; fileRef = 053535231A18E54C00155FBF /* NSArray+Movies.m */; };
+		053535241A18E54C00155FBF /* NSArray+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 053535231A18E54C00155FBF /* NSArray+Helpers.m */; };
 		053535291A18ED5A00155FBF /* movie.json in Resources */ = {isa = PBXBuildFile; fileRef = 053535261A18ED5A00155FBF /* movie.json */; };
 		0535352A1A18ED5B00155FBF /* Stubs.m in Sources */ = {isa = PBXBuildFile; fileRef = 053535281A18ED5A00155FBF /* Stubs.m */; };
 		0535352D1A18EF6400155FBF /* director.json in Resources */ = {isa = PBXBuildFile; fileRef = 0535352B1A18EF6400155FBF /* director.json */; };
 		0535352E1A18EF6400155FBF /* movies_director.json in Resources */ = {isa = PBXBuildFile; fileRef = 0535352C1A18EF6400155FBF /* movies_director.json */; };
 		053535311A18F2DD00155FBF /* OHHTTPStubsResponse+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 053535301A18F2DD00155FBF /* OHHTTPStubsResponse+JSON.m */; };
-		053535341A18FB9000155FBF /* RACSignal+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 053535331A18FB9000155FBF /* RACSignal+AFNetworking.m */; };
+		053535341A18FB9000155FBF /* RACSignal+Request.m in Sources */ = {isa = PBXBuildFile; fileRef = 053535331A18FB9000155FBF /* RACSignal+Request.m */; };
 		9AF4AD1359A785B7CD44D807 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9502E6D85D34A8353474C8C /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -55,8 +55,8 @@
 		053535191A18E15A00155FBF /* Director.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Director.m; sourceTree = "<group>"; };
 		0535351A1A18E15A00155FBF /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
 		0535351B1A18E15A00155FBF /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
-		053535221A18E54C00155FBF /* NSArray+Movies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Movies.h"; sourceTree = "<group>"; };
-		053535231A18E54C00155FBF /* NSArray+Movies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Movies.m"; sourceTree = "<group>"; };
+		053535221A18E54C00155FBF /* NSArray+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Helpers.h"; sourceTree = "<group>"; };
+		053535231A18E54C00155FBF /* NSArray+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Helpers.m"; sourceTree = "<group>"; };
 		053535261A18ED5A00155FBF /* movie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = movie.json; sourceTree = "<group>"; };
 		053535271A18ED5A00155FBF /* Stubs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stubs.h; sourceTree = "<group>"; };
 		053535281A18ED5A00155FBF /* Stubs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stubs.m; sourceTree = "<group>"; };
@@ -64,8 +64,8 @@
 		0535352C1A18EF6400155FBF /* movies_director.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = movies_director.json; sourceTree = "<group>"; };
 		0535352F1A18F2DD00155FBF /* OHHTTPStubsResponse+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OHHTTPStubsResponse+JSON.h"; sourceTree = "<group>"; };
 		053535301A18F2DD00155FBF /* OHHTTPStubsResponse+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OHHTTPStubsResponse+JSON.m"; sourceTree = "<group>"; };
-		053535321A18FB9000155FBF /* RACSignal+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RACSignal+AFNetworking.h"; sourceTree = "<group>"; };
-		053535331A18FB9000155FBF /* RACSignal+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RACSignal+AFNetworking.m"; sourceTree = "<group>"; };
+		053535321A18FB9000155FBF /* RACSignal+Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RACSignal+Request.h"; sourceTree = "<group>"; };
+		053535331A18FB9000155FBF /* RACSignal+Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RACSignal+Request.m"; sourceTree = "<group>"; };
 		54B5669D5738334845C1A81F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E9502E6D85D34A8353474C8C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -167,12 +167,12 @@
 		053535211A18E52500155FBF /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				053535321A18FB9000155FBF /* RACSignal+AFNetworking.h */,
-				053535331A18FB9000155FBF /* RACSignal+AFNetworking.m */,
+				053535321A18FB9000155FBF /* RACSignal+Request.h */,
+				053535331A18FB9000155FBF /* RACSignal+Request.m */,
 				0535352F1A18F2DD00155FBF /* OHHTTPStubsResponse+JSON.h */,
 				053535301A18F2DD00155FBF /* OHHTTPStubsResponse+JSON.m */,
-				053535221A18E54C00155FBF /* NSArray+Movies.h */,
-				053535231A18E54C00155FBF /* NSArray+Movies.m */,
+				053535221A18E54C00155FBF /* NSArray+Helpers.h */,
+				053535231A18E54C00155FBF /* NSArray+Helpers.m */,
 			);
 			path = Categories;
 			sourceTree = SOURCE_ROOT;
@@ -344,8 +344,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				053535341A18FB9000155FBF /* RACSignal+AFNetworking.m in Sources */,
-				053535241A18E54C00155FBF /* NSArray+Movies.m in Sources */,
+				053535341A18FB9000155FBF /* RACSignal+Request.m in Sources */,
+				053535241A18E54C00155FBF /* NSArray+Helpers.m in Sources */,
 				053534FA1A18E13000155FBF /* ViewController.m in Sources */,
 				0535351C1A18E15A00155FBF /* Director.m in Sources */,
 				0535352A1A18ED5B00155FBF /* Stubs.m in Sources */,

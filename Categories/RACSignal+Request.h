@@ -8,7 +8,7 @@
 
 #import "RACSignal.h"
 
-@interface RACSignal (AFNetworking)
+@interface RACSignal (Request)
 
 + (RACSignal *)getRequest:(NSString *)path;
 

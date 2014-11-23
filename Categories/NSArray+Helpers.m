@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Anders Frank. All rights reserved.
 //
 
-#import "NSArray+Movies.h"
+#import "NSArray+Helpers.h"
 
 @implementation NSArray (Movies)
 
