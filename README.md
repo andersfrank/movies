@@ -1,4 +1,4 @@
 movies
 ======
 
-Examples of ReactiveCocoa aided network requests.
+Networkrequests and Key Value Observing with ReactiveCocoa.
