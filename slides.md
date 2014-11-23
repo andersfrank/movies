@@ -77,7 +77,7 @@ RACSignal *getSignal = [RACSignal getRequest:@"movie/12123"];
 #### ---------A--------|
 #### ---------B--------|
 
-En operator är en metod som verkar på en signal och returnerar en ny signal.
+En operator är en metod som från en signal returnerar en ny signal.
 
 ---
 # Operatorer
@@ -446,6 +446,9 @@ subscribeNext:^(NSNumber *directorRating) {
 
 ```14.``` Applikationen anropar POST SignOrder/ varannan sekund tills det returnerade SignOrder objektet har state ```COMPLETE```.
 
+---
+
+#KVO
 
 ---
 
