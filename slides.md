@@ -1,6 +1,6 @@
 # Signaler med ReactiveCocoa
 
-##o------o------o------x
+##-------o------o------x
 
 ---
 
@@ -8,7 +8,7 @@
 
 # `RACSignal`
 
-## En signal är ett objekt som skickar värden
+## Objekt som skickar värden
 
 ---
 
@@ -38,15 +38,67 @@ RACSignal *getSignal = [RACSignal getRequest:@"movie/12123"];
 ```
 
 ---
+# Error
+# -----x
 
+---
+
+# Error
+
+```objectivec
+RACSignal *getSignal = [RACSignal getRequest:@"movie/12123"];
+        
+[getSignal subscribeNext:^(NSDictionary *json) {
+	NSLog(@"did fetch movie: %@",json);
+} error:^(NSError *error) {
+ 	NSLog(@"request failed with error: %@",error);
+}];
+```
+
+---
+
+# Complete
+## ----------|
+
+---
+
+# Complete
+```objectivec
+RACSignal *getSignal = [RACSignal getRequest:@"movie/12123"];
+        
+[getSignal subscribeCompleted:^{
+	NSLog(@"completed!");
+}];
+```
+---
+
+# Operatorer
+
+#### ---------A--------|
+#### ---------B--------|
+
+En operator är en metod som verkar på en signal och returnerar en ny signal.
+
+---
+# Operatorer
+```objectivec
+ - map:
+ - flattenMap:
+ - filter:
+ - delay:
+ - repeat
+ - take:
+ - merge:
+ - collect:
+```
+
+---
 # Map
-
+### Omvandlar en signals värden till nya värden
 ---
 
 # Map
 
-
-^Den här signalen skickar som sagt ett json-objekt.
 
 ```objectivec
 [RACSignal getRequest:@"movie/12123"]
@@ -85,16 +137,9 @@ map:^id(NSDictionary *json) {
 
 ---
 
-^Om man vill utföra flera nätverksanrop i rad kan man använda operatorn flatten map.
-
 # Flatten map
-
+### Skapar en helt ny signal från ett skickat värde
 ---
-
-
-
-^Flatten map är en operator som gör det möjligt att omvandla en signal till en ny signal som använder sig av värden som levereras av den första signalen.
-^Här hämtas först en film, sedan dess regissör.
 
 # Flatten map
 
@@ -363,59 +408,55 @@ subscribeNext:^(NSNumber *directorRating) {
 ``` 
 
 ---
-# Error
-# -----x
+
+#Exempel
+## starta sparande 
 
 ---
 
-# Complete
-## ----------|
+```1.``` Terms and condition visas.
 
----
-# Operatorer
+```2.``` Användaren svarar på “Know Your Customer” frågor.
 
- - filter:
- - concat:
- - delay:
- - repeat
- - take:
- - merge:
- - collect:
+```3.``` Användaren matar in sitt personnummer.
 
----
+```4.``` Om användaren saknar bank-id appen informeras han om att detta krävs.
 
-1. Terms and condition visas.
+```5.``` Applikationen anropar MobileBankIdIdentification/ med användarens personnummer som ett headervärde.
 
-1. Användaren svarar på “Know Your Customer” frågor.
-
-1. Användaren matar in sitt personnummer.
-
-1. Om användaren saknar bank-id appen informeras han om att detta krävs.
-
-1. Applikationen anropar MobileBankIdIdentification/ med användarens personnummer som ett headervärde.
-
-1. Applikationen anropar MobileBankIdIdentification/<referense_id> en gång och öppnar därefter bank-id appen.
+```6.``` Applikationen anropar MobileBankIdIdentification/<referense_id>.
 
 ---
 
-1. Applikationen anropar MobileBankIdIdentification/<referense_id> varannan sekund tills den retuernerar progress code ```COMPLETE```
+```7.``` Bankid-applikationen öppnas så att användaren kan signera.
 
-1. Applikationen anropar ConfigurationValues/
+```8.``` Applikationen anropar MobileBankIdIdentification/<referense_id> varannan sekund tills den returnerar progress code ```COMPLETE```
 
-1. Applikationen anropar SavingApplications/ som returnerar ett saving application id.
+```9.``` Applikationen anropar ConfigurationValues/
 
-1. Applikationen anropar POST SignOrder/ där sign order objektet som postas innehåller saving applications id:et.
+```10.```Applikationen anropar SavingApplications/
 
-1. Därefter öppnas bank id applikationen och låter användaren signera.
+```11.```Applikationen anropar POST SignOrder/ med application id
 
-1. Applikationen anropar POST SignOrder/ med applkations id:et varannan sekund tills det returnerade SignOrder objektet har state COMPLETE. I sign order objektet som postas ingår target saving objektet som användaren blivit inbjuden till.
-I det returnerade SignOrder objektet ingår en session samt det nu accepterade target saving objektet.
+```12.```Applikationen anropar POST SignOrder/ med sparmålet
+
+```13.```Bankid-applikationen öppnas så att användaren kan signera.
+
+---
+
+```14.``` Applikationen anropar POST SignOrder/ varannan sekund tills det returnerade SignOrder objektet har state ```COMPLETE```.
 
 
 ---
 
-#Exempelkod
+#Länkar
 
-#### git@github.com:andersfrank/movies.git
+- http://github.com/andersfrank/movies
+
+- http://nshipster.com/reactivecocoa/
+
+- http://github.com/hsjunnesson/RACFlickrSearch
+
+- http://github.com/hsjunnesson/CrayolaColors
 
 
