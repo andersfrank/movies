@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		053534F41A18E13000155FBF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 053534F31A18E13000155FBF /* main.m */; };
 		053534F71A18E13000155FBF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 053534F61A18E13000155FBF /* AppDelegate.m */; };
-		053534FA1A18E13000155FBF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 053534F91A18E13000155FBF /* ViewController.m */; };
 		053534FD1A18E13000155FBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 053534FB1A18E13000155FBF /* Main.storyboard */; };
 		053534FF1A18E13000155FBF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 053534FE1A18E13000155FBF /* Images.xcassets */; };
 		053535021A18E13000155FBF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 053535001A18E13000155FBF /* LaunchScreen.xib */; };
@@ -23,6 +22,9 @@
 		0535352E1A18EF6400155FBF /* movies_director.json in Resources */ = {isa = PBXBuildFile; fileRef = 0535352C1A18EF6400155FBF /* movies_director.json */; };
 		053535311A18F2DD00155FBF /* OHHTTPStubsResponse+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 053535301A18F2DD00155FBF /* OHHTTPStubsResponse+JSON.m */; };
 		053535341A18FB9000155FBF /* RACSignal+Request.m in Sources */ = {isa = PBXBuildFile; fileRef = 053535331A18FB9000155FBF /* RACSignal+Request.m */; };
+		059E4FDA1A221B240014C309 /* KVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 059E4FD91A221B240014C309 /* KVOViewController.m */; };
+		059E4FDD1A2220E70014C309 /* RACKVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 059E4FDC1A2220E70014C309 /* RACKVOViewController.m */; };
+		05C739F21A221A10008A96F3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C739F11A221A10008A96F3 /* ViewController.m */; };
 		9AF4AD1359A785B7CD44D807 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9502E6D85D34A8353474C8C /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -43,8 +45,6 @@
 		053534F31A18E13000155FBF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		053534F51A18E13000155FBF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		053534F61A18E13000155FBF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		053534F81A18E13000155FBF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		053534F91A18E13000155FBF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		053534FC1A18E13000155FBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		053534FE1A18E13000155FBF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		053535011A18E13000155FBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -66,6 +66,12 @@
 		053535301A18F2DD00155FBF /* OHHTTPStubsResponse+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OHHTTPStubsResponse+JSON.m"; sourceTree = "<group>"; };
 		053535321A18FB9000155FBF /* RACSignal+Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RACSignal+Request.h"; sourceTree = "<group>"; };
 		053535331A18FB9000155FBF /* RACSignal+Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RACSignal+Request.m"; sourceTree = "<group>"; };
+		059E4FD81A221B240014C309 /* KVOViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVOViewController.h; sourceTree = "<group>"; };
+		059E4FD91A221B240014C309 /* KVOViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVOViewController.m; sourceTree = "<group>"; };
+		059E4FDB1A2220E70014C309 /* RACKVOViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACKVOViewController.h; sourceTree = "<group>"; };
+		059E4FDC1A2220E70014C309 /* RACKVOViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACKVOViewController.m; sourceTree = "<group>"; };
+		05C739F01A221A10008A96F3 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		05C739F11A221A10008A96F3 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		54B5669D5738334845C1A81F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E9502E6D85D34A8353474C8C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -115,10 +121,9 @@
 				053535251A18ED5A00155FBF /* Stubbing */,
 				053535211A18E52500155FBF /* Categories */,
 				053535171A18E15A00155FBF /* Models */,
+				05C739EF1A221A10008A96F3 /* Controllers */,
 				053534F51A18E13000155FBF /* AppDelegate.h */,
 				053534F61A18E13000155FBF /* AppDelegate.m */,
-				053534F81A18E13000155FBF /* ViewController.h */,
-				053534F91A18E13000155FBF /* ViewController.m */,
 				053534FB1A18E13000155FBF /* Main.storyboard */,
 				053534FE1A18E13000155FBF /* Images.xcassets */,
 				053535001A18E13000155FBF /* LaunchScreen.xib */,
@@ -188,6 +193,19 @@
 			);
 			path = Stubbing;
 			sourceTree = SOURCE_ROOT;
+		};
+		05C739EF1A221A10008A96F3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				05C739F01A221A10008A96F3 /* ViewController.h */,
+				05C739F11A221A10008A96F3 /* ViewController.m */,
+				059E4FD81A221B240014C309 /* KVOViewController.h */,
+				059E4FD91A221B240014C309 /* KVOViewController.m */,
+				059E4FDB1A2220E70014C309 /* RACKVOViewController.h */,
+				059E4FDC1A2220E70014C309 /* RACKVOViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
 		};
 		AEFA522BDD206D9AB39D1599 /* Frameworks */ = {
 			isa = PBXGroup;
@@ -344,15 +362,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05C739F21A221A10008A96F3 /* ViewController.m in Sources */,
 				053535341A18FB9000155FBF /* RACSignal+Request.m in Sources */,
 				053535241A18E54C00155FBF /* NSArray+Helpers.m in Sources */,
-				053534FA1A18E13000155FBF /* ViewController.m in Sources */,
 				0535351C1A18E15A00155FBF /* Director.m in Sources */,
 				0535352A1A18ED5B00155FBF /* Stubs.m in Sources */,
 				0535351D1A18E15A00155FBF /* Movie.m in Sources */,
 				053534F71A18E13000155FBF /* AppDelegate.m in Sources */,
 				053535311A18F2DD00155FBF /* OHHTTPStubsResponse+JSON.m in Sources */,
+				059E4FDD1A2220E70014C309 /* RACKVOViewController.m in Sources */,
 				053534F41A18E13000155FBF /* main.m in Sources */,
+				059E4FDA1A221B240014C309 /* KVOViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

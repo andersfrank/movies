@@ -107,13 +107,6 @@
         NSLog(@"The director's average rating on imdb is: %@",directorRating);
     }];
     
-    {
-        RACSignal *getSignal = [RACSignal getRequest:@"movie/12123"];
-        
-        [getSignal subscribeCompleted:^{
-            NSLog(@"completed!");
-        }];
-    
     return YES;
 }
 
